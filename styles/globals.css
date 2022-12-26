@@ -16,7 +16,7 @@
     @apply text-[35px] font-bold ;
   }
   h3{
-    @apply text-[30px] font-medium ;
+    @apply text-[30px] font-semibold ;
   }
   /* a{
     font-family: 'Chivo Mono', monospace;

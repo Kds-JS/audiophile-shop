@@ -3,7 +3,7 @@ import speaker from'assets/images/home/desktop/image-speaker-zx9.png';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Product = () => {
+const HomeProduct = () => {
     return (
         <section className='mx-[4%] md:mx-[6%] xl:mx-[13%]'>
             <div className=' home-product bg-primary-800 rounded-lg shadow-md'>
@@ -56,4 +56,4 @@ const Product = () => {
     );
 };
 
-export default Product;
+export default HomeProduct;

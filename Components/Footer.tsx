@@ -18,13 +18,13 @@ const Footer = () => {
                     <Link href="/" className='hover:text-primary-800 transition-colors duration-150 '>
                         Home
                     </Link>
-                    <Link href="/headphones" className='hover:text-primary-800 transition-colors duration-150'>
+                    <Link href="/category/headphones" className='hover:text-primary-800 transition-colors duration-150'>
                     Headphones
                     </Link>
-                    <Link href="/speakers" className='hover:text-primary-800 transition-colors duration-150'>
+                    <Link href="/category/speakers" className='hover:text-primary-800 transition-colors duration-150'>
                         Speakers
                     </Link>
-                    <Link href="/earphones" className='hover:text-primary-800 transition-colors duration-150'>
+                    <Link href="/category/earphones" className='hover:text-primary-800 transition-colors duration-150'>
                     Earphone
                     </Link>
                    
