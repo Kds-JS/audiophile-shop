@@ -1,10 +1,40 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {formatPrice} from 'utils/helpers';
 
 import {ProductTypes} from 'product';
+import { useAppSelector, useAppDispatch } from 'redux/app/hooks';
+import {addItemToCart} from 'redux/features/cartSlice';
 
 
 const ProductBox = ({product} : { product: ProductTypes }) => {
+    const dispatch = useAppDispatch();
+    const [amount, setAmount] = useState(1);
+
+    const incAmount = () => {
+        setAmount((prevState) => prevState + 1);
+    };
+
+    const decAmount = () => {
+        setAmount((prevState) => {
+        if (prevState === 1) {
+            return 1;
+        }
+        return prevState - 1;
+        });
+    };
+
+  const addToCart = () => {
+    const item = {
+        id : product.slug,
+        name: product.shortName,
+        price: product.price,
+        amount,
+        img: product.image.desktop,
+    };
+    dispatch(addItemToCart(item));
+    // dispatch(toggleCartAside());
+    setAmount(1);
+  };
 
     return (
         <div className='grid justify-center items-center gap-6 grid-cols-1 md:grid-cols-2 mt-[50px]'>
@@ -28,13 +58,13 @@ const ProductBox = ({product} : { product: ProductTypes }) => {
             <div className='flex gap-4 items-center my-[25px]'>
 
                 <div className=' py-[12px] px-[20px] bg-secondary-800 flex justify-between w-[130px] text-black font-semibold'>
-                    <span className='cursor-pointer'>-</span>
-                    <span className='cursor-pointer'>2</span>
-                    <span className='cursor-pointer'>+</span>
+                    <span className='cursor-pointer' onClick={decAmount}>-</span>
+                    <span className='cursor-pointer'>{amount}</span>
+                    <span className='cursor-pointer' onClick={incAmount}>+</span>
                 </div>
 
                 <div>
-                    <button className='btn-primary bg-primary-800 text-white hover:opacity-70'>ADD TO CART</button>
+                    <button className='btn-primary bg-primary-800 text-white hover:opacity-70' onClick={addToCart}>ADD TO CART</button>
                 </div>
 
             </div>
