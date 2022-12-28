@@ -57,7 +57,8 @@ const cartSlice = createSlice({
       const cart_item = state.cart.find((item) => action.payload === item.id);
       
       if(cart_item!.amount == 1) {
-        cart_item!.amount = 1
+        state.cart = state.cart.filter((item) => item.id !== action.payload);
+        localStorage.setItem('cart', JSON.stringify(state.cart));
       } else {
         cart_item!.amount -= 1;
       }

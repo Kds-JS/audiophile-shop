@@ -9,7 +9,7 @@ import { formatPrice } from 'utils/helpers';
 
 import { useAppSelector, useAppDispatch } from 'redux/app/hooks';
 import { toggleCartInfo, clearCart, incItemAmount, decItemAmount } from 'redux/features/cartSlice';
-import { useDispatch } from 'react-redux';
+import {  toggleCartModal} from 'redux/features/modalSlice';
 
 export interface CartItem {
   id: string;
@@ -22,24 +22,24 @@ export interface CartItem {
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [cart, setCart] = useState<CartItem[]>([]);
+  const [showModal, setShowModal] = useState(false);
 
   const newCart = useAppSelector((state) => state.cart);
-  const dispatch = useDispatch();
+  const newModal = useAppSelector((state) => state.modal);
+  const dispatch = useAppDispatch();
 
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openModal = () => {
-    setIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
+  const toggleModal = () => {
+    dispatch(toggleCartModal());
   };
 
   useEffect(() => {
     setCart(newCart.cart);
     updateCartInfos();
   }, [newCart]);
+
+  useEffect(() => {
+    setShowModal(newModal.isCartOpen);
+  }, [newModal]);
 
 
   const updateCartInfos = () => {
@@ -91,7 +91,12 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className=" relative cursor-pointer" onClick={openModal}>
+          <div className=" relative cursor-pointer" 
+          onClick={() => {
+            toggleModal()
+            setShowMobileMenu(false)
+          }}
+          >
             <AiOutlineShoppingCart className="text-[30px]" />
             <div className="bg-primary-800 text-white h-[20px] w-[20px] rounded-full absolute -top-1 -right-2 flex justify-center items-center font-bold">
               {newCart.amount}
@@ -134,11 +139,19 @@ const Navbar = () => {
       </nav>
 
  
-      <div className={`fixed inset-0 ${isOpen ? 'flex' : 'hidden'}`}>
-        <div className="fixed inset-0 z-40 bg-black bg-opacity-30" onClick={closeModal}></div>
+      <div className={`fixed inset-0 ${showModal ? 'flex' : 'hidden'}`}>
+        <div className="fixed inset-0 z-40 bg-black bg-opacity-30" onClick={toggleModal}></div>
         <div className="flex items-start justify-center md:justify-end  w-[100%] mr-0 md:mr-[6%] lg:mr-[12%] ">
 
-<div className="relative z-50 p-[30px] w-[92%] md:w-[70%] lg:w-[40%] bg-white shadow-2xl text-black rounded-lg mt-[150px]">
+          {cart.length == 0 ? (
+              <div className="relative z-50 p-[30px] w-[92%] md:w-[70%] lg:w-[40%] bg-white shadow-2xl text-black rounded-lg mt-[150px]">
+                <p className='text-black font-semibold text-[20px] text-center'>YOUR CART IS EMPTY. <br /> <br /> FILL IT!</p>
+              </div>
+          )
+        :
+        (
+
+          <div className="relative z-50 p-[30px] w-[92%] md:w-[70%] lg:w-[40%] bg-white shadow-2xl text-black rounded-lg mt-[150px]">
             <div className="flex justify-between">
               <h3>CART ({newCart.amount}) </h3>
               <button
@@ -178,12 +191,15 @@ const Navbar = () => {
               <span className="font-bold">{formatPrice(newCart.total)}</span>
             </div>
 
-            <Link href="/checkout" onClick={closeModal}>
+            <Link href="/checkout" onClick={toggleModal}>
               <button className="w-[100%] py-[15px] bg-primary-800 text-white font-bold hover:opacity-80">
                 CHECKOUT
               </button>
             </Link>
           </div>
+
+          )
+          }
           
           </div>
       </div>

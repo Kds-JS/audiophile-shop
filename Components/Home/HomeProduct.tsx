@@ -19,7 +19,7 @@ const HomeProduct = () => {
                     <h1 className='text-white'>ZX9 SPEAKER</h1>
                     <p className='mt-[25px] mb-[35px] text-white lg:mr-20'>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
                     <div>
-                    <Link href="/" className='btn-primary bg-primary-600 text-white hover:bg-primary-700'>SEE PRODUCT</Link>
+                    <Link href="/products/zx9-speaker" className='btn-primary bg-primary-600 text-white hover:bg-primary-700'>SEE PRODUCT</Link>
                     </div>
                 </div>
 
@@ -30,7 +30,7 @@ const HomeProduct = () => {
                 <div>
                     <h2 className='text-black'>ZX7 SPEAKER</h2>
                     <div className='mt-[30px]'>
-                    <Link href="/" className='btn-primary text-black border border-black'>SEE PRODUCT</Link>
+                    <Link href="/products/zx7-speaker" className='btn-primary text-black border border-black transition-all duration-30 hover:bg-black hover:text-white'>SEE PRODUCT</Link>
                     </div>
                 </div>
             </div>
@@ -44,9 +44,9 @@ const HomeProduct = () => {
 
                     <div className='rounded-lg shadow-sm bg-secondary-800 flex flex-col justify-center px-[20%] h-[320px]'>
                         <div>
-                            <h2 className='text-black'>ZX7 SPEAKER</h2>
+                            <h2 className='text-black'>YX1 EARPHONES</h2>
                             <div className='mt-[30px]'>
-                            <Link href="/" className='btn-primary text-black border border-black'>SEE PRODUCT</Link>
+                            <Link href="/products/yx1-earphones" className='btn-primary text-black border border-black transition-all duration-300 hover:bg-black hover:text-white'>SEE PRODUCT</Link>
                             </div>
                         </div>
                     </div>

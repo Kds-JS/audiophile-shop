@@ -3,12 +3,15 @@ import React, {useState} from 'react';
 import CardItem from 'Components/Checkout/CardItem';
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import FormControl from 'Components/Checkout/FormControl';
+
+
 import {
     general_rules,
     email_rules,
     phone_rules,
     emoney_rules,
   } from 'utils/rules';
+
 import SendNotification from 'Components/Checkout/SendNotification';
 
 
@@ -20,7 +23,6 @@ import SendNotification from 'Components/Checkout/SendNotification';
     zip: string;
     city: string;
     country: string;
-    emoney: string;
     emoneyNumber: string;
     emoneyPin: string;
   }
@@ -29,6 +31,7 @@ function checkout() {
     const [isMoney,setIsMoney] = useState(true);
     
     const [isOpen, setIsOpen] = useState(false);
+
 
     const openModal = () => {
       setIsOpen(true);
@@ -47,16 +50,16 @@ function checkout() {
           zip: '',
           city: '',
           country: '',
-          emoney: '',
           emoneyNumber: '',
           emoneyPin: '',
         },
       });
     
       const onSubmit: SubmitHandler<FormInput> = (data) => {
-        console.log(data);
         openModal();
       };
+
+      
 
     const handleChangeRadio = (event : any) => {
         if(event.target.name == 'delivery'){
@@ -73,9 +76,7 @@ function checkout() {
         <section className='px-[4%] md:px-[6%] xl:px-[13%] py-[50px]'>
             <Link href="/" className='hover:text-primary-800 '>Go Back</Link>
 
-            {/* <div className='my-[60px] grid gap-6 grid-cols-1 lg:grid-cols-3'>
-                <div className='col-span-2 bg-white text-black rounded-md shadow-sm py-[30px] px-[20px]'> */}
-                    <h3 className='text-black mb-[25px]'>CHECKOUT</h3>
+                    <h3 className='text-black mt-[25px]'>CHECKOUT</h3>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='my-[60px] grid gap-6 grid-cols-1 lg:grid-cols-3'>
@@ -328,7 +329,7 @@ function checkout() {
 
                     </form>
 
-                <SendNotification isOpen={isOpen} closeModal={closeModal}/>
+                <SendNotification isOpen={isOpen} closeModal={() => closeModal()} />
         </section>
     );
 }

@@ -48,6 +48,10 @@
   .bestgear-bg{
     @apply bg-[url('../assets/images/shared/mobile/image-best-gear.jpg')] md:bg-[url('../assets/images/shared/tablet/image-best-gear.jpg')] lg:bg-[url('../assets/images/shared/desktop/image-best-gear.jpg')] bg-no-repeat bg-center bg-cover h-[300px] lg:h-[568px]  rounded-lg;
   }
+
+  .prevent-scroll{
+    @apply overflow-hidden;
+  }
 }
 
 .cart-modal{

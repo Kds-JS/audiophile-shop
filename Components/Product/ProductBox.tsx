@@ -4,6 +4,7 @@ import {formatPrice} from 'utils/helpers';
 import {ProductTypes} from 'product';
 import { useAppSelector, useAppDispatch } from 'redux/app/hooks';
 import {addItemToCart} from 'redux/features/cartSlice';
+import {  toggleCartModal} from 'redux/features/modalSlice';
 
 
 const ProductBox = ({product} : { product: ProductTypes }) => {
@@ -32,7 +33,7 @@ const ProductBox = ({product} : { product: ProductTypes }) => {
         img: product.image.desktop,
     };
     dispatch(addItemToCart(item));
-    // dispatch(toggleCartAside());
+    dispatch(toggleCartModal());
     setAmount(1);
   };
 

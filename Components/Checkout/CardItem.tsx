@@ -27,7 +27,7 @@ const CardItem = () => {
 
 
     return (
-        <div className='bg-white h-[590px] rounded-md shadow-sm py-[30px] px-[25px]' >
+        <div className='bg-white max-h-max rounded-md shadow-sm py-[30px] px-[25px]' >
             <h3 className='text-black'>Summary</h3>
 
             {cart.length != 0 &&
@@ -76,7 +76,7 @@ const CardItem = () => {
 
               </div>
 
-              <input type="submit" value="CONTINUE & PAY" className='py-[15px] px-[25px] w-full bg-primary-800 hover:opacity-70 text-white font-bold'/>
+              <input type="submit" value="CONTINUE & PAY" className='py-[15px] px-[25px] w-full bg-primary-800 hover:opacity-70 text-white font-bold cursor-pointer'/>
         </div>
     );
 };
