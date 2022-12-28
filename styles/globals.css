@@ -23,10 +23,11 @@
   } */
 }
 
+
 @layer components {
   
   .hero-section {
-    @apply h-[92vh] md:h-[95vh] lg:h-[90vh] bg-[url('../assets/images/home/mobile/image-hero.jpg')] md:bg-[url('../assets/images/home/mobile/image-hero.jpg')] lg:bg-[url('../assets/images/home/desktop/image-hero.jpg')] bg-no-repeat bg-center bg-cover;
+    @apply h-[92vh] md:h-[95vh] lg:h-[90vh] bg-no-repeat bg-center bg-cover;
   }
 
   .btn-primary{
@@ -38,15 +39,15 @@
   }
 
   .speaker-bg{
-    @apply h-[320px] bg-[url('../assets/images/home/mobile/image-speaker-zx7.jpg')] md:bg-[url('../assets/images/home/tablet/image-speaker-zx7.jpg')] lg:bg-[url('../assets/images/home/desktop/image-speaker-zx7.jpg')] bg-no-repeat bg-center bg-cover;
+    @apply h-[320px] bg-no-repeat bg-center bg-cover;
   }
 
   .earphone-bg{
-    @apply bg-[url('../assets/images/home/mobile/image-earphones-yx1.jpg')] md:bg-[url('../assets/images/home/tablet/image-earphones-yx1.jpg')] lg:bg-[url('../assets/images/home/desktop/image-earphones-yx1.jpg')] bg-no-repeat bg-center bg-cover;
+    @apply bg-no-repeat bg-center bg-cover;
   }
 
   .bestgear-bg{
-    @apply bg-[url('../assets/images/shared/mobile/image-best-gear.jpg')] md:bg-[url('../assets/images/shared/tablet/image-best-gear.jpg')] lg:bg-[url('../assets/images/shared/desktop/image-best-gear.jpg')] bg-no-repeat bg-center bg-cover h-[300px] lg:h-[568px]  rounded-lg;
+    @apply bg-no-repeat bg-center bg-cover h-[300px] lg:h-[568px]  rounded-lg;
   }
 
   .prevent-scroll{
@@ -54,12 +55,59 @@
   }
 }
 
-.cart-modal{
-  background-color: rgb(0, 0, 0, 0.6)
-}
-
 .category-card:hover button{
   color: #D87D4A;
 }
 
+.hero-section{
+  background-image: url('../assets/images/home/desktop/image-hero.jpg');
+}
+
+.speaker-bg{
+  background-image: url('../assets/images/home/desktop/image-speaker-zx7.jpg');
+}
+
+.earphone-bg{
+  background-image: url('../assets/images/home/desktop/image-earphones-yx1.jpg');
+}
+
+.bestgear-bg{
+  background-image: url('../assets/images/shared/desktop/image-best-gear.jpg');
+}
+
+@media screen and (max-width: 976px) {
+  .hero-section{
+    background-image: url('../assets/images/home/tablet/image-hero.jpg');
+  }
+
+  .speaker-bg{
+    background-image: url('../assets/images/home/tablet/image-speaker-zx7.jpg');
+  }
+
+  .earphone-bg{
+    background-image: url('../assets/images/home/tablet/image-earphones-yx1.jpg');
+  }
+
+  .bestgear-bg{
+    background-image: url('../assets/images/shared/tablet/image-best-gear.jpg');
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section{
+    background-image: url('../assets/images/home/mobile/image-hero.jpg');
+  }
+
+  .speaker-bg{
+    background-image: url('../assets/images/home/mobile/image-speaker-zx7.jpg');
+  }
+
+  .earphone-bg{
+    background-image: url('../assets/images/home/mobile/image-earphones-yx1.jpg');
+  }
+
+  .bestgear-bg{
+    background-image: url('../assets/images/shared/mobile/image-best-gear.jpg');
+  }
+}
 
