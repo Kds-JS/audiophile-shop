@@ -27,7 +27,7 @@ import SendNotification from 'Components/Checkout/SendNotification';
     emoneyPin: string;
   }
 
-function checkout() {
+function Checkout() {
     const [isMoney,setIsMoney] = useState(true);
     
     const [isOpen, setIsOpen] = useState(false);
@@ -318,7 +318,7 @@ function checkout() {
 
                         <div className='flex flex-col md:flex-row gap-6 md:items-center '>
                             <img src="/assets/images/checkout/icon-cash-on-delivery.svg" alt="image" className='w-[100px]'/>
-                            <p>The 'Cash on Delivery' option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.</p>
+                            <p>{"The 'Cash on Delivery' option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled."}</p>
                         </div>
 
                         )}
@@ -334,4 +334,4 @@ function checkout() {
     );
 }
 
-export default checkout;
+export default Checkout;
