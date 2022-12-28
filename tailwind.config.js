@@ -32,6 +32,20 @@ module.exports = {
 				herodesktop: "url('/assets/images/home/desktop/image-hero.jpg')",
 				herotablet: "url('/assets/images/home/tablet/image-hero.jpg')",
         heromobile: "url('/assets/images/home/mobile/image-hero.jpg')",
+
+        circlesbg: "url('/assets/images/home/desktop/pattern-circles.svg')",
+
+        speakerbgdesktop: "url('/assets/images/home/desktop/image-speaker-zx7.jpg')",
+				speakerbgtablet: "url('/assets/images/home/tablet/image-speaker-zx7.jpg')",
+        speakerbgmobile: "url('/assets/images/home/mobile/image-speaker-zx7.jpg')",
+
+        earphonebgdesktop: "url('/assets/images/home/desktop/image-earphones-yx1.jpg')",
+				earphonebgtablet: "url('/assets/images/home/tablet/image-earphones-yx1.jpg')",
+        earphonebgmobile: "url('/assets/images/home/mobile/image-earphones-yx1.jpg')",
+
+        bestgeardesktop: "url('/assets/images/shared/desktop/image-best-gear.jpg')",
+				bestgeartablet: "url('/assets/images/shared/tablet/image-best-gear.jpg')",
+        bestgearmobile: "url('/assets/images/shared/mobile/image-best-gear.jpg')",
 			},
     },
   },

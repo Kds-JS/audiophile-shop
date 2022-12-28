@@ -6,7 +6,7 @@ import Image from 'next/image';
 const HomeProduct = () => {
     return (
         <section className='mx-[4%] md:mx-[6%] xl:mx-[13%]'>
-            <div className=' home-product bg-primary-800 rounded-lg shadow-md'>
+            <div className='bg-circlesbg bg-no-repeat bg-center bg-cover bg-primary-800 rounded-lg shadow-md'>
             <div className='grid gap-6 grid-cols-1 xl:grid-cols-2 h-[560px] px-[10%] xl:px-0 py-[10%] xl:py-0'>
                 <div className='relative overflow-hidden'>
                     <div className='xl:absolute -bottom-5 right-10 flex justify-center xl:block'>
@@ -26,7 +26,7 @@ const HomeProduct = () => {
             </div>
             </div>
 
-            <div className='speaker-bg mt-[50px] rounded-lg shadow-md flex flex-col justify-center px-[12%]'>
+            <div className='bg-speakerbgmobile md:bg-speakerbgtablet lg:bg-speakerbgdesktop h-[320px] bg-no-repeat bg-center bg-cover mt-[50px] rounded-lg shadow-md flex flex-col justify-center px-[12%]'>
                 <div>
                     <h2 className='text-black'>ZX7 SPEAKER</h2>
                     <div className='mt-[30px]'>
@@ -38,7 +38,7 @@ const HomeProduct = () => {
             <div className='mt-[50px]'>
 
                 <div className='grid gap-6 grid-cols-1 md:grid-cols-2 '>
-                    <div className='earphone-bg rounded-lg shadow-sm h-[320px]'>
+                    <div className='bg-earphonebgmobile md:bg-earphonebgtablet lg:bg-earphonebgdesktop bg-no-repeat bg-center bg-cover rounded-lg shadow-sm h-[320px]'>
 
                     </div>
 

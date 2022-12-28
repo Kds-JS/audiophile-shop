@@ -4,13 +4,3 @@ export const formatPrice = (num: number) => {
       currency: 'USD',
     }).format(num);
   };
-
-  export const preventScroll = (open: boolean) => {
-    const body = document.getElementById('body')!;
-  
-    if (open) {
-      body.classList.add('prevent-scroll');
-    } else {
-      body.classList.remove('prevent-scroll');
-    }
-  };
