@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { preventScroll } from 'utils/helpers';
+
 
 interface  ModalState {
   isCartOpen: boolean;
