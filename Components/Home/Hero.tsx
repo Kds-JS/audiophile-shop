@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Hero = () => {
     return (
-        <section className='hero-section px-[4%] md:px-[6%] xl:px-[13%] flex items-center justify-center lg:justify-start'>
+        <section className=' bg-heromobile md:bg-herotablet lg:bg-herodesktop h-[92vh] md:h-[95vh] lg:h-[90vh] bg-no-repeat bg-center bg-cover px-[4%] md:px-[6%] xl:px-[13%] flex items-center justify-center lg:justify-start'>
             <div className='basis-[70%] md:basis-[50%] lg:basis-[35%] text-center lg:text-left'>
                 <p className='mb-[20px] tracking-widest font-medium'>NEW PRODUCT</p>
                 <h1 className='text-white tracking-wider'>XX99 MARK II HEADPHONES</h1>

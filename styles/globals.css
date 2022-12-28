@@ -24,10 +24,6 @@
 }
 
 @layer components {
-  
-  .hero-section {
-    @apply h-[92vh] md:h-[95vh] lg:h-[90vh] bg-[url('../assets/images/home/mobile/image-hero.jpg')] md:bg-[url('../assets/images/home/mobile/image-hero.jpg')] lg:bg-[url('../assets/images/home/desktop/image-hero.jpg')] bg-no-repeat bg-center bg-cover;
-  }
 
   .btn-primary{
     @apply py-[12px] px-[35px] font-medium;

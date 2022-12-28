@@ -27,6 +27,12 @@ module.exports = {
             600: '#9C9C9C'
           }
       },
+
+      backgroundImage: {
+				herodesktop: "url('/assets/images/home/desktop/image-hero.jpg')",
+				herotablet: "url('/assets/images/home/tablet/image-hero.jpg')",
+        heromobile: "url('/assets/images/home/mobile/image-hero.jpg')",
+			},
     },
   },
   plugins: [
