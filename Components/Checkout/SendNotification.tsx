@@ -36,7 +36,7 @@ const SendNotification = ({isOpen, closeModal} : props) => {
     }, [newCart]);
 
     const backToHome = () => {
-      closeModal;
+      closeModal();
       dispatch(clearCart());
     }
     
