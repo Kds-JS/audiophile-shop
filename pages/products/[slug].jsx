@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import {products} from 'Data/products.json';
-import { GetStaticPaths } from 'next';
+
 
 // import {ProductTypes} from 'product';
 
