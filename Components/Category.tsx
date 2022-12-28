@@ -11,7 +11,7 @@ const Category = () => {
         <section>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-3 '>
 
-                <Link href="/headphones">
+                <Link href="/category/headphones">
                 <div className='category-card relative h-[200px] flex flex-col justify-end shadow-sm'>
                     <div className='h-[165px] bg-secondary-800 flex flex-col items-center justify-end pb-[20px] rounded-md'>
                         <p className='text-black font-medium'>HEADPHONES</p>
@@ -23,7 +23,7 @@ const Category = () => {
                 </div>
                 </Link>
 
-                <Link href="/speakers">
+                <Link href="/category/speakers">
                 <div className='category-card relative h-[200px] flex flex-col justify-end shadow-sm '>
                     <div className='h-[165px] bg-secondary-800 flex flex-col items-center justify-end pb-[20px] rounded-md'>
                         <p className='text-black font-medium'>SPEAKERS</p>
@@ -35,7 +35,7 @@ const Category = () => {
                 </div>
                 </Link>
 
-                <Link href="/earphones">
+                <Link href="/category/earphones">
                 <div className='category-card relative h-[200px] flex flex-col justify-end shadow-sm'>
                     <div className='h-[165px] bg-secondary-800 flex flex-col items-center justify-end pb-[20px] rounded-md'>
                         <p className='text-black font-medium'>EARPHONES</p>
