@@ -21,11 +21,20 @@ export interface CartItem {
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [showCart, setShowCart] = useState(false);
   const [cart, setCart] = useState<CartItem[]>([]);
 
   const newCart = useAppSelector((state) => state.cart);
   const dispatch = useDispatch();
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
 
   useEffect(() => {
     setCart(newCart.cart);
@@ -39,13 +48,9 @@ const Navbar = () => {
 
   const showMenu = () => {
     setShowMobileMenu(!showMobileMenu);
-    setShowCart(false);
   };
 
-  const showCartModal = () => {
-    setShowMobileMenu(false);
-    setShowCart(!showCart);
-  };
+
 
   return (
     <header className="bg-primary-600 text-white px-[4%] md:px-[6%] xl:px-[13%] border-b border-opacity-20 border-secondary-600 relative">
@@ -86,7 +91,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className=" relative cursor-pointer" onClick={showCartModal}>
+          <div className=" relative cursor-pointer" onClick={openModal}>
             <AiOutlineShoppingCart className="text-[30px]" />
             <div className="bg-primary-800 text-white h-[20px] w-[20px] rounded-full absolute -top-1 -right-2 flex justify-center items-center font-bold">
               {newCart.amount}
@@ -128,13 +133,12 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <div
-        className={`cart-modal h-[100vh] absolute m-auto top-[100%] left-0 right-0 ${
-          !showCart ? 'hidden' : 'block'
-        }`}
-      >
-        <div className="flex items-center lg:items-start justify-center md:justify-end mt-[50px] mr-0 md:mr-[6%] lg:mr-[12%] text-[18px]">
-          <div className="p-[30px] w-[92%] md:w-[70%] lg:w-[40%] bg-white shadow-2xl text-black rounded-lg">
+ 
+      <div className={`fixed inset-0 ${isOpen ? 'flex' : 'hidden'}`}>
+        <div className="fixed inset-0 z-40 bg-black bg-opacity-30" onClick={closeModal}></div>
+        <div className="flex items-start justify-center md:justify-end  w-[100%] mr-0 md:mr-[6%] lg:mr-[12%] ">
+
+<div className="relative z-50 p-[30px] w-[92%] md:w-[70%] lg:w-[40%] bg-white shadow-2xl text-black rounded-lg mt-[150px]">
             <div className="flex justify-between">
               <h3>CART ({newCart.amount}) </h3>
               <button
@@ -174,14 +178,16 @@ const Navbar = () => {
               <span className="font-bold">{formatPrice(newCart.total)}</span>
             </div>
 
-            <Link href="/">
+            <Link href="/checkout" onClick={closeModal}>
               <button className="w-[100%] py-[15px] bg-primary-800 text-white font-bold hover:opacity-80">
                 CHECKOUT
               </button>
             </Link>
           </div>
-        </div>
+          
+          </div>
       </div>
+
     </header>
   );
 };

@@ -1,13 +1,17 @@
-import ProductCategory from 'Components/ProductCategory';
 import React from 'react';
 import {products} from 'Data/products.json';
+import ProductCategory from 'Components/ProductCategory';
+import BestGear from 'Components/BestGear';
 
 export default function HeadphonesPage (props){
     // console.log(props.product)
     return (
-        <div>
+        <>
             <ProductCategory products={props.product}/>
-        </div>
+            <BestGear/>
+        </>
+
+
     );
 };
 

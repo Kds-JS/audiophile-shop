@@ -10,11 +10,14 @@ import ProductFeature from 'Components/Product/ProductFeature';
 import ProductBox from 'Components/Product/ProductBox';
 import ProductGalery from 'Components/Product/ProductGalery';
 import OtherProduct from 'Components/Product/OtherProduct';
+import BestGear from 'Components/BestGear';
 
 const product = (props) => {
     const product = props.product;
     
     return (
+        <>
+
         <section className='px-[4%] md:px-[6%] xl:px-[13%] py-[50px]'>
             <Link href="/" className='hover:text-primary-800 '>Go Back</Link>
            
@@ -30,8 +33,13 @@ const product = (props) => {
             <div className='mt-[150px]'>
                 <Category/>
             </div>
+
         </section>
-    );
+
+        <BestGear/>
+        
+        </>
+    )
 };
 
 export default product;

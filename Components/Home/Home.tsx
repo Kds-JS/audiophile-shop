@@ -1,3 +1,4 @@
+import BestGear from 'Components/BestGear';
 import Category from 'Components/Category';
 import React from 'react';
 import Hero from './Hero';
@@ -11,6 +12,7 @@ const Home = () => {
         <Category />
       </div>
       <Product />
+      < BestGear/>
     </>
   );
 };

@@ -1,5 +1,4 @@
 import React, { ReactChild,ReactChildren } from 'react';
-import BestGear from './BestGear';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
@@ -14,7 +13,6 @@ const Container = ({children}: AuxProps) => {
         <>
             <Navbar/>
                 {children}
-            <BestGear/>
             <Footer/>
         </>
     );
