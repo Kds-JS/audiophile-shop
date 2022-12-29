@@ -10,7 +10,7 @@ const Hero = () => {
                 <h1 className='text-white tracking-wider'>XX99 MARK II HEADPHONES</h1>
                 <p className='mt-[25px] mb-[35px] text-secondary-700'>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
                 <div>
-                    <Link href="/products/xx99-mark-two-headphones" className='btn-primary bg-primary-800 text-white hover:bg-primary-900'>SEE PRODUCT</Link>
+                    <Link href="/products/xx99-mark-two-headphones" className='btn-primary bg-primary-800 text-white hover:opacity-70'>SEE PRODUCT</Link>
                 </div>
             </div>
         </section>

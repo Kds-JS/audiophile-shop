@@ -17,7 +17,7 @@ const HomeProduct = () => {
 
                 <div className='flex flex-col justify-center text-center xl:text-left '>
                     <h1 className='text-white'>ZX9 SPEAKER</h1>
-                    <p className='mt-[25px] mb-[35px] text-white lg:mr-20'>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
+                    <p className='mt-[25px] mb-[35px] text-white lg:mr-20 md:px-[20%] lg:px-0'>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
                     <div>
                     <Link href="/products/zx9-speaker" className='btn-primary bg-primary-600 text-white hover:bg-primary-700'>SEE PRODUCT</Link>
                     </div>

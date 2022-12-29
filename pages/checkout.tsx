@@ -76,11 +76,10 @@ function Checkout() {
         <section className='px-[4%] md:px-[6%] xl:px-[13%] py-[50px]'>
             <Link href="/" className='hover:text-primary-800 '>Go Back</Link>
 
-                    <h3 className='text-black mt-[25px]'>CHECKOUT</h3>
-
                     <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='my-[60px] grid gap-6 grid-cols-1 lg:grid-cols-3'>
                         <div className='col-span-2 bg-white text-black rounded-md shadow-sm py-[30px] px-[20px]'>
+                        <h3 className='text-black mb-[20px]'>CHECKOUT</h3>
                         <p className='text-primary-800 mb-[25px] font-medium'>BILLING DETAILS</p>
 
                         <div className='grid gap-6 grid-cols-1 md:grid-cols-2'>
@@ -254,11 +253,11 @@ function Checkout() {
                                 
                                     
                                     <div className="flex items-center py-[10px] pl-4 rounded-lg border-2 border-gray-300 mb-[20px]">
-                                        <input checked={isMoney} id="bordered-radio-1" type="checkbox" value='' name="e-money" className="w-4 h-4 text-primary-800 bg-gray-100 border-gray-300 focus:ring-primary-800 " onChange={handleChangeRadio}/>
+                                        <input checked={isMoney} id="bordered-radio-1" type="checkbox" value='' name="e-money" className="w-4 rounded-full h-4 text-primary-800 bg-gray-100 border-gray-300 focus:ring-primary-800 " onChange={handleChangeRadio}/>
                                         <label htmlFor="bordered-radio-1" className="py-4 ml-2 w-full text-sm font-medium text-black  ">E-money</label>
                                     </div>
                                     <div className="flex items-center py-[10px] pl-4 rounded-lg border-2 border-gray-300 ">
-                                        <input id="bordered-radio-2" checked={!isMoney} type="checkbox" value='' name="delivery" className="w-4 h-4 text-primary-800 bg-gray-100 border-gray-300 focus:ring-primary-800 dark:focus:ring-primary-800 " onChange={handleChangeRadio}/>
+                                        <input id="bordered-radio-2" checked={!isMoney} type="checkbox" value='' name="delivery" className="w-4 rounded-full h-4 text-primary-800 bg-gray-100 border-gray-300 focus:ring-primary-800 dark:focus:ring-primary-800 " onChange={handleChangeRadio}/>
                                         <label htmlFor="bordered-radio-2" className="py-4 ml-2 w-full text-sm font-medium text-black">Cash on Delivery</label>
                                     </div>
 
@@ -324,7 +323,11 @@ function Checkout() {
                         )}
 
                         </div>
-                        <CardItem/>
+                        
+                        <div>
+                            <CardItem/>
+                        </div>
+
                         </div>
 
                     </form>

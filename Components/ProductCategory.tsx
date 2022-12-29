@@ -27,7 +27,7 @@ const ProductCategory = ({products} : {products : ProductTypes[]}) => {
                                     <h2 className='text-black tracking-wider'>{item.name}</h2>
                                     <p className='mt-[25px] mb-[35px] text-secondary-700'>{item.description}</p>
                                     <div>
-                                        <Link href={`/products/${item.slug}`} className='btn-primary bg-primary-800 text-white hover:bg-primary-900'>SEE PRODUCT</Link>
+                                        <Link href={`/products/${item.slug}`} className='btn-primary bg-primary-800 text-white hover:opacity-70'>SEE PRODUCT</Link>
                                     </div>
                                 </div>
 
@@ -58,7 +58,7 @@ const ProductCategory = ({products} : {products : ProductTypes[]}) => {
                                     <h2 className='text-black tracking-wider'>{item.name}</h2>
                                     <p className='mt-[25px] mb-[35px] text-secondary-700'>{item.description}</p>
                                     <div>
-                                        <Link href={`/products/${item.slug}`} className='btn-primary bg-primary-800 text-white hover:bg-primary-900'>SEE PRODUCT</Link>
+                                        <Link href={`/products/${item.slug}`} className='btn-primary bg-primary-800 text-white hover:opacity-70'>SEE PRODUCT</Link>
                                     </div>
                                 </div>
                             </div>

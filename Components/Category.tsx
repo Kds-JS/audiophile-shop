@@ -14,10 +14,10 @@ const Category = () => {
                 <Link href="/category/headphones">
                 <div className='category-card relative h-[200px] flex flex-col justify-end shadow-sm'>
                     <div className='h-[165px] bg-secondary-800 flex flex-col items-center justify-end pb-[20px] rounded-md'>
-                        <p className='text-black font-medium'>HEADPHONES</p>
+                        <p className='text-black font-semibold'>HEADPHONES</p>
                         <button className='flex mt-[15px] items-center font-medium'>SHOP <MdOutlineNavigateNext className='text-[25px]'/></button>
                     </div>
-                    <div className='absolute top-0 left-[30%] md:left-[25%] lg:left-[30%]'>
+                    <div className='absolute top-0 w-full flex justify-center'>
                         <Image src={headphone} alt="headphone" width={130}/>
                     </div>
                 </div>
@@ -26,10 +26,10 @@ const Category = () => {
                 <Link href="/category/speakers">
                 <div className='category-card relative h-[200px] flex flex-col justify-end shadow-sm '>
                     <div className='h-[165px] bg-secondary-800 flex flex-col items-center justify-end pb-[20px] rounded-md'>
-                        <p className='text-black font-medium'>SPEAKERS</p>
+                        <p className='text-black font-semibold'>SPEAKERS</p>
                         <button className='flex mt-[15px] items-center font-medium'>SHOP <MdOutlineNavigateNext className='text-[25px]'/></button>
                     </div>
-                    <div className='absolute top-0 left-[30%] md:left-[25%] lg:left-[30%]'>
+                    <div className='absolute top-0 w-full flex justify-center'>
                         <Image src={speaker} alt="headphone" width={130}/>
                     </div>
                 </div>
@@ -38,10 +38,10 @@ const Category = () => {
                 <Link href="/category/earphones">
                 <div className='category-card relative h-[200px] flex flex-col justify-end shadow-sm'>
                     <div className='h-[165px] bg-secondary-800 flex flex-col items-center justify-end pb-[20px] rounded-md'>
-                        <p className='text-black font-medium'>EARPHONES</p>
+                        <p className='text-black font-semibold'>EARPHONES</p>
                         <button className='flex mt-[15px] items-center font-medium'>SHOP <MdOutlineNavigateNext className='text-[25px]'/></button>
                     </div>
-                    <div className='absolute top-0 left-[30%] md:left-[25%] lg:left-[30%]'>
+                    <div className='absolute top-0 w-full flex justify-center'>
                         <Image src={earphone} alt="headphone" width={130}/>
                     </div>
                 </div>
