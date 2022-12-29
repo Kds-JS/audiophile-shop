@@ -111,24 +111,28 @@ const Navbar = () => {
         >
           <div className="flex justify-center items-center flex-col gap-4 font-medium uppercase text-black text-[20px]">
             <Link
+            onClick={() => setShowMobileMenu(false)}
               href="/"
               className="hover:text-primary-800 transition-colors duration-150"
             >
               Home
             </Link>
             <Link
+              onClick={() => setShowMobileMenu(false)}
               href="/category/headphones"
               className="hover:text-primary-800 transition-colors duration-150"
             >
               Headphones
             </Link>
             <Link
+              onClick={() => setShowMobileMenu(false)}
               href="/category/speakers"
               className="hover:text-primary-800 transition-colors duration-150"
             >
               Speakers
             </Link>
             <Link
+              onClick={() => setShowMobileMenu(false)}
               href="/category/earphones"
               className="hover:text-primary-800 transition-colors duration-150"
             >
