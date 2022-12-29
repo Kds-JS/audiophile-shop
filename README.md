@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Audiophile Shop
 
-## Getting Started
+[![shop App](https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/ax9kvjgksws1lz8vrlim.jpg)](https://twitter.com/kds_JS)
 
-First, run the development server:
+[![shop App](https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/dgxetxuu7dmkrgubeuav.jpg)](https://twitter.com/kds_JS)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Site web de commerce électronique pour la vente de casques, de haut-parleurs et d'écouteurs
+#### Le site est responsive
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Le lien du défi Frontend Mentor
+ - [x] Afficher la disposition optimale de l'application en fonction de la taille de l'écran de leur appareil
+ - [x] Voir les états de survol pour tous les éléments interactifs de la page
+ - [x] Ajouter/supprimer des produits du panier
+ - [x] Modifier les quantités de produits dans le panier
+ - [x] Remplissez tous les champs du checkout
+ - [x] Recevoir des validations de formulaire si des champs sont manquants ou incorrects lors du paiement
+ - [x] Voir les totaux de paiement corrects en fonction des produits dans le panier
+ - [x] Voir un modal de confirmation de commande après le paiement avec un récapitulatif de la commande
+ - [x] Gardez une trace de ce qu'il y a dans le panier, même après avoir actualisé le navigateur ( localStorage )
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## [LIVE ICI](https://kds-audiophile-shop.vercel.app/)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Technologies utilisés 
+ - Next JS
+ - TypeScript
+ - Redux
+ - Tailwind CSS
+ - React Hook Form
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Cloner le repo github
+   ```sh
+   git clone https://github.com/Kds-JS/audiophile-shop.git
+   ```
+2. Installer les dépendances
+   ```sh
+   npm install
+   ```
+3. Lancer l'application
+   ```sh
+   npm start
+   ```
 
-## Learn More
+## Contact
 
-To learn more about Next.js, take a look at the following resources:
+Kds - [@twitter](https://twitter.com/kds_JS) 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Lien du Projet: [https://github.com/Kds-JS/audiophile-shop.git])
