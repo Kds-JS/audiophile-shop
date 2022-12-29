@@ -7,7 +7,7 @@
 ### Site web de commerce électronique pour la vente de casques, de haut-parleurs et d'écouteurs
 #### Le site est responsive
 
-## Le lien du défi Frontend Mentor
+## Tâches
  - [x] Afficher la disposition optimale de l'application en fonction de la taille de l'écran de leur appareil
  - [x] Voir les états de survol pour tous les éléments interactifs de la page
  - [x] Ajouter/supprimer des produits du panier
@@ -19,6 +19,8 @@
  - [x] Gardez une trace de ce qu'il y a dans le panier, même après avoir actualisé le navigateur ( localStorage )
 
 ## [LIVE ICI](https://kds-audiophile-shop.vercel.app/)
+
+## [LIEN DU DEFI FRONTEND MENTOR](https://www.frontendmentor.io/challenges/audiophile-ecommerce-website-C8cuSd_wx)
 
 ## Technologies utilisés 
  - Next JS
